@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">StockAPP</string>
+    <string name="companies">Companies</string>
+    <string name="stocks">Stocks</string>
+    <string name="buyStock">Buy Stock</string>
+    <string name="my_stocks">My Stocks</string>
+</resources>
