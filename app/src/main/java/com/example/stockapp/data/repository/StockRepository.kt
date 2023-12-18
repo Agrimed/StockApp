@@ -4,7 +4,7 @@ import com.example.stockapp.data.dao.StockDao
 import com.example.stockapp.data.dao.StocksEntity
 
 class StockRepository(val stockDB: StockDao) {
-    suspend fun getAllStocks() = stockDB.getAllStocks()
+    fun getAllStocks() = stockDB.getAllStocks()
 
     fun getStockById(id: String) = stockDB.getStockById(id)
 

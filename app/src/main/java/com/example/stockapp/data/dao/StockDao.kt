@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.Flow
 interface StockDao {
 
     @Query("SELECT * FROM StocksEntity")
-    suspend fun getAllStocks(): List<StocksEntity>
+    fun getAllStocks(): Flow<List<StocksEntity>>
 
     @Query("SELECT * FROM StocksEntity WHERE secId = :id")
     fun getStockById(id: String): Flow<StocksEntity>

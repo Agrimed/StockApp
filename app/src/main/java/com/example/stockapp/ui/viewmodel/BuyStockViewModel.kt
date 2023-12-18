@@ -22,12 +22,12 @@ class BuyStockViewModel(
 
     private val secId: String = checkNotNull(savedStateHandle[BuyStockScreenDest.stockIdArg])
 
-    val uiState: StateFlow<Stock?> =
+    val uiState: StateFlow<Stock> =
         repository.getStockById(secId).map { it.toStock() }
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(TIMEOUT_MILLIS),
-            initialValue = null
+            initialValue = Stock("", "", 0.0, 0)
         )
 
     fun buyStock(item: StocksEntity) {
