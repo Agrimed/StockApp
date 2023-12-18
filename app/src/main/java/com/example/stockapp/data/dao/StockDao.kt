@@ -24,7 +24,4 @@ interface StockDao {
 
     @Query("SELECT * FROM StocksEntity WHERE amount > 0")
     fun getAllMyStocks(): Flow<List<StocksEntity>>
-
-//    @Insert(onConflict = OnConflictStrategy.IGNORE)
-//    suspend fun insert(item: MyStocksEntity)
 }

@@ -11,6 +11,4 @@ class StockRepository(val stockDB: StockDao) {
     suspend fun update(stock: StocksEntity) = stockDB.update(stock)
 
     fun getAllMyStocks() = stockDB.getAllMyStocks()
-
-//    suspend fun insertStock(stock: MyStocksEntity) = stockDB.insert(stock)
 }
